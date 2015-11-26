@@ -15,5 +15,13 @@ def filter(name, fname):
     return text
 
 def freq(text):
-    for vocab in re.findall(ur'[a-zа-яё]+', text, re.U):
-        print vocab
+    vocab={}
+    for word in re.findall(ur'[a-zа-яё]+', text):
+        if word not in vocab:
+            vocab[word]=0
+        vocab[word]+=1
+    for word in vocab:
+        print word, vocab[word]
+
+
+
