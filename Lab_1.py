@@ -3,4 +3,6 @@ __author__ = 'Полина'
 
 import Zipf_law
 
-Zipf_law.filter("text.txt")
+text=Zipf_law.filter("text.txt", "text1.txt")
+
+Zipf_law.freq(text)
